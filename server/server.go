@@ -7,7 +7,7 @@ func main() {
 	r.GET("/api/ping", pingGet)
 	r.Static("/static", "./static")
 	r.NoRoute(func(c *gin.Context) {
-		c.File("./index.html")
+		c.File("./client/index.html")
 	})
 	r.Run() // listen and server on 0.0.0.0:8080
 }
